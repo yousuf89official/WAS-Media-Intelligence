@@ -25,8 +25,12 @@ export function BrandCard({ brand }: BrandCardProps) {
 
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <div className="flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-lg ${brand.logo} flex items-center justify-center text-white font-bold shadow-lg`}>
-                        {brand.name.substring(0, 1)}
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden bg-white/10 shadow-sm border border-white/10">
+                        {brand.logo ? (
+                            <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
+                        ) : (
+                            <div className="text-white font-bold">{brand.name.substring(0, 1)}</div>
+                        )}
                     </div>
                     <div>
                         <CardTitle className="text-lg font-bold">{brand.name}</CardTitle>

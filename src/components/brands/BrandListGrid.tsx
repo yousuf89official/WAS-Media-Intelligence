@@ -188,15 +188,15 @@ export default function BrandListGrid({ brands, industries }: BrandListGridProps
                             >
                                 <Card className="p-0 overflow-hidden h-full border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ring-1 ring-slate-200 flex flex-col">
                                     {/* TOP HALF: White Background, Centered Logo */}
-                                    <div className="h-40 bg-white flex items-center justify-center relative p-6 border-b border-slate-100">
+                                    <div className="h-40 bg-white flex items-center justify-center relative p-2 border-b border-slate-100">
                                         <div className="absolute inset-0 bg-slate-50/30" /> {/* Subtle texture */}
                                         <BrandAvatar
                                             logo_url={brand.logo}
                                             name={brand.name}
                                             brand_color={undefined} // Force no background color inline style
                                             size="custom"
-                                            containerClassName="!bg-transparent !shadow-none !rounded-none !border-none w-[70%] h-[70%] group-hover:scale-110 transition-transform duration-500 z-10 flex items-center justify-center p-0"
-                                            imageClassName="h-full w-full object-contain"
+                                            containerClassName="!bg-transparent !shadow-none !rounded-none !border-none w-full h-full group-hover:scale-110 transition-transform duration-500 z-10 flex items-center justify-center p-2"
+                                            imageClassName="h-full w-full object-contain max-h-[80%]"
                                         />
                                     </div>
 
